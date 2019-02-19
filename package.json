@@ -2,9 +2,16 @@
   "name": "@drjs/router",
   "version": "0.1.0",
   "description": "Router for react with multilanguage routes and named routes",
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
-  "author": "amadormf",
+  "author": "Amador Mateo <amateofernandez@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drjs-framework/router.git"
+  },
   "scripts": {
     "clean": "rm -rf dist",
     "compile": "babel -d dist src",
