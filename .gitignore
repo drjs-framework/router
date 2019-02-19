@@ -1,0 +1,112 @@
+###> Misc
+ubuntu-xenial-16.04-cloudimg-console.log
+playbook.retry
+###> Symfony
+/build/
+/node_modules/
+/var/*
+!var/.gitignore
+!var/cache/.gitignore
+!var/log/.gitignore
+.env
+/vendor/
+/src/front/config/apiRoutes.json
+/deploy/playbook.retry
+###> Composer
+composer.phar
+
+###> PHPUnit
+app/phpunit.xml
+
+###> vim
+.*.sw[a-z]
+*.un~
+Session.vim
+.netrwhist
+
+# eclipse
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+.externalToolBuilders/
+*.launch
+.buildpath
+
+###> phpstorm
+.idea/
+
+###> textmate
+*.tmproj
+*.tmproject
+tmtags
+
+###> sublimetext
+/*.sublime-project
+*.sublime-workspace
+
+###> netbeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+###> VS Code
+.vscode
+
+###> Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+###> Vagrant
+.vagrant
+*~
+
+###> Mac OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+.php_cs
+.php_cs.cache
+
+###> Node
+node_modules/
+robohydra.log
+yarn-error.log
+/public/images/
+/statics/translations/all.*
+yarn-error.log
+###< Node
+###> symfony/framework-bundle ###
+/.env
+/public/bundles/
+/public/uploads/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> lexik/jwt-authentication-bundle ###
+/config/jwt/*.pem
+###< lexik/jwt-authentication-bundle ###
+/backups
+/coverage
