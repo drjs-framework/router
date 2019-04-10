@@ -14,7 +14,7 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "compile": "babel -d dist src",
+    "compile": "yarn clean && babel -d dist src",
     "compile:watch": "npm run compile -- --watch",
     "lint": "eslint src",
     "lint:fix": "npm run lint -- --fix",
@@ -28,7 +28,8 @@
   "dependencies": {
     "query-string": "^6.2.0",
     "react": "^16.8.2",
-    "react-router": "^4.3.1"
+    "react-router": "^4.3.1",
+    "react-router-dom": "4.3.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
