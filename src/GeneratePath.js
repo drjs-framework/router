@@ -10,7 +10,7 @@ export default class GeneratePath {
   }
 
   generateQueryString(parameters) {
-    return queryString.stringify(parameters);
+    return queryString.stringify(parameters, { arrayFormat: 'bracket' });
   }
 
 
