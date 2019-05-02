@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Switch } from 'react-router';
+import { Switch, withRouter } from 'react-router';
 import RouteMatch from './RouteMatch';
 
-export default class RouteSwitch extends React.Component {
+class RouteSwitch extends React.Component {
   static propTypes = {
     languages: PropTypes.array.isRequired,
     defaultLanguage: PropTypes.string.isRequired,
@@ -78,3 +78,5 @@ export default class RouteSwitch extends React.Component {
     );
   }
 }
+
+export default withRouter(RouteSwitch);
