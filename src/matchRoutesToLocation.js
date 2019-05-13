@@ -55,7 +55,7 @@ function buildMatch(parentPattern, route, location) {
   return false;
 }
 
-function matchRoutesToLocation(
+export function matchRoutesToLocation(
   routesConfig, multiLanguage, location, matchedRoutes = [],
   matchedExactRoutes = [], params = {}, parentPattern = ''
 ) {
@@ -94,5 +94,3 @@ function matchRoutesToLocation(
 
   return { matchedRoutes, matchedExactRoutes, params };
 }
-
-export default matchRoutesToLocation;

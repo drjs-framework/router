@@ -1,5 +1,5 @@
 import queryString from 'query-string';
-import matchRoutesToLocation, { getMatch } from './matchRoutesToLocation';
+import { matchRoutesToLocation, getMatch } from './matchRoutesToLocation';
 
 export function simplifyArrayLanguages(languages) {
   return languages.map(language => (language.slug));
