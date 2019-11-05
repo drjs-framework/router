@@ -1,6 +1,6 @@
 {
   "name": "@drjs/router",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Router for react with multilanguage routes and named routes",
   "files": [
     "dist"
