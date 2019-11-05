@@ -112,9 +112,11 @@ export default class GeneratePath {
   }
 
   buildPathWithRoutes(
-    name, parameters = {}, options = {
+    name, parameters = {},
+    options = {
       absolute: false,
-    }
+    },
+    hash = null,
   ) {
     const route = findRouteByName(name, this.routes);
 
@@ -125,6 +127,6 @@ export default class GeneratePath {
     const finalOptions = Object.assign(
       options, this.buildOptionsWithRoutesConf(this.routes, route)
     );
-    return this.buildPathWithRoute(route, parameters, finalOptions);
+    return this.buildPathWithRoute(route, parameters, finalOptions, hash);
   }
 }
