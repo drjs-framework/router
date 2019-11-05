@@ -10,8 +10,10 @@ export default function LinkComponent({
   className,
   onClick,
   target,
+  options,
+  hash,
 }) {
-  const path = getRoute(name, params);
+  const path = getRoute(name, params, options, hash);
 
   return (
     <Link
@@ -30,6 +32,11 @@ LinkComponent.defaultProps = {
   className: 'Link',
   onClick: null,
   target: null,
+  options: {
+    absolute: false,
+    showDefaultLanguage: true,
+  },
+  hash: null,
 };
 
 LinkComponent.propTypes = {
@@ -43,4 +50,6 @@ LinkComponent.propTypes = {
   className: PropTypes.string,
   onClick: PropTypes.func,
   target: PropTypes.string,
+  options: PropTypes.object,
+  hash: PropTypes.string,
 };

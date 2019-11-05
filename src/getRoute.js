@@ -2,7 +2,7 @@ import GeneratePath from './GeneratePath';
 import { searchRouteForUrl, simplifyArrayLanguages } from './utils';
 
 export default function getRoute(
-  name, parameters, options = { absolute: false, translate: false }
+  name, parameters, options = { absolute: false, translate: false }, hash = null,
 ) {
   const finalOptions = Object.assign({
     language: Translate.locale,
@@ -14,7 +14,8 @@ export default function getRoute(
   return generatePath.buildPathWithRoutes(
     name,
     parameters,
-    finalOptions
+    finalOptions,
+    hash
   );
 }
 

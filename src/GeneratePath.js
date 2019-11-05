@@ -69,7 +69,8 @@ export default class GeneratePath {
     options = {
       absolute: false,
       showDefaultLanguage: true,
-    }
+    },
+    hash = null,
   ) {
     if (!route.path) {
       return urlJoin('/', this.generateQueryString(parameters));
@@ -95,6 +96,10 @@ export default class GeneratePath {
 
     if (typeof route.path !== 'string') {
       finalPath = this.concatenateLanguage(finalPath, options.language);
+    }
+
+    if (typeof hash === 'string' && hash && hash !== '') {
+      finalPath = `${finalPath}#${hash}`;
     }
 
     return this.concatenateDomain(finalPath, options);
