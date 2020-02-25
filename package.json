@@ -1,6 +1,6 @@
 {
   "name": "@drjs/router",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Router for react with multilanguage routes and named routes",
   "files": [
     "dist"
@@ -27,9 +27,11 @@
   },
   "dependencies": {
     "query-string": "^6.2.0",
-    "react": "^16.8.2",
     "react-router": "^4.3.1",
     "react-router-dom": "4.3.1"
+  },
+  "peerDependencies": {
+    "react": ">=16"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -53,6 +55,7 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
-    "jest": "^24.1.0"
+    "jest": "^24.1.0",
+    "react": "^16.12.0"
   }
 }
