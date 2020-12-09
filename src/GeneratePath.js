@@ -9,8 +9,8 @@ export default class GeneratePath {
     this.routes = routes;
   }
 
-  generateQueryString(parameters) {
-    return queryString.stringify(parameters, { arrayFormat: 'bracket' });
+  generateQueryString(parameters, options = { encode: true }) {
+    return queryString.stringify(parameters, { arrayFormat: 'bracket', encode: options.encode });
   }
 
 
@@ -69,11 +69,12 @@ export default class GeneratePath {
     options = {
       absolute: false,
       showDefaultLanguage: true,
+      encode: true,
     },
     hash = null,
   ) {
     if (!route.path) {
-      return urlJoin('/', this.generateQueryString(parameters));
+      return urlJoin('/', this.generateQueryString(parameters, options));
     }
 
     const path = this.getPathOfRoute(route, options);
@@ -91,7 +92,7 @@ export default class GeneratePath {
 
     let finalPath = toPath(parameters);
     if (Object.keys(searchParameters).length > 0) {
-      finalPath = `${finalPath}?${this.generateQueryString(searchParameters)}`;
+      finalPath = `${finalPath}?${this.generateQueryString(searchParameters, options)}`;
     }
 
     if (typeof route.path !== 'string') {
